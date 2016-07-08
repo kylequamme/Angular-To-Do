@@ -1,6 +1,15 @@
 body{
   padding: 10px;
 }
+main{
+}
 h1{
   text-align: center;
+}
+span{
+  display: block;
+}
+.results{
+  padding: 5px, 10px;
+  line-height: 2em;
 }

@@ -15,13 +15,21 @@
       <h1>Angular-To-Do</h1>
     </header>
     <main>
-      <input type="text" ng-model="inputToDo" />
-      <button ng-click="submitToDo()">Add</button>
-      <div ng-show="viewToDo">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <input type="text" class="form-control" ng-model="inputToDo">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary btn-success" type="button" ng-click="submitToDo()">Add</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="results" ng-show="viewToDo">
         <ul>
-          <li ng-repeat="item in list">{{item.desc}} <input type="checkbox" ng-click="markForRemoval(item)"/></li>
+          <span ng-repeat="item in list"><input type="checkbox" ng-click="markForRemoval(item)"/> {{item.desc}}</span>
         </ul>
-        <button ng-click="removeItems()">Remove</button>
+        <button class="btn btn-danger" ng-click="removeItems()">Remove</button>
       </div>
     </main>
   </body>
